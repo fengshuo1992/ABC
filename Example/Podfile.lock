@@ -1,5 +1,5 @@
 PODS:
-  - ABC (0.1.0.Binary)
+  - ABC (0.1.0)
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
   - FBSnapshotTestCase/Core (2.1.4)
@@ -19,7 +19,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ABC: 06febaac4c0325a2c0c63bc52f272fbf22668f13
+  ABC: 40e7ee540de057b3522b5b61500bc39beb2f1f5a
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
 
 PODFILE CHECKSUM: cc6b26690a12060bef105d56308045c58c9a69c5
