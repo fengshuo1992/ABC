@@ -1,0 +1,27 @@
+PODS:
+  - ABC (0.1.0.Binary)
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+
+DEPENDENCIES:
+  - ABC (from `../`)
+  - FBSnapshotTestCase
+
+SPEC REPOS:
+  trunk:
+    - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  ABC:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ABC: 06febaac4c0325a2c0c63bc52f272fbf22668f13
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+
+PODFILE CHECKSUM: cc6b26690a12060bef105d56308045c58c9a69c5
+
+COCOAPODS: 1.9.3

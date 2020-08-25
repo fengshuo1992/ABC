@@ -22,6 +22,9 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
+		821E333624F5082300089F51 /* placeholder.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 821E333324F5082300089F51 /* placeholder.h */; };
+		821E333F24F5092D00089F51 /* ABC.m in Sources */ = {isa = PBXBuildFile; fileRef = 821E333D24F5092D00089F51 /* ABC.m */; };
+		821E334124F509B500089F51 /* ABC.h in Headers */ = {isa = PBXBuildFile; fileRef = 821E333E24F5092D00089F51 /* ABC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		EC3F0429BCCA8E474EA570F8 /* Pods_ABC_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A650C448FFA5737C3F61C0BE /* Pods_ABC_Example.framework */; };
 /* End PBXBuildFile section */
@@ -35,6 +38,19 @@
 			remoteInfo = ABC;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		821E332F24F5082300089F51 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				821E333624F5082300089F51 /* placeholder.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0E285C17AFC2D35A95C374DA /* Pods-ABC_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ABC_Tests.release.xcconfig"; path = "Target Support Files/Pods-ABC_Tests/Pods-ABC_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -59,14 +75,18 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		6D2E6509B360F2D15A66D1F3 /* ABC.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ABC.podspec; path = ../ABC.podspec; sourceTree = "<group>"; };
-		6F83D40C19ABD725548C21C2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		6D2E6509B360F2D15A66D1F3 /* ABC.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ABC.podspec; path = ../ABC.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6F83D40C19ABD725548C21C2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		821E333124F5082300089F51 /* libABCBinary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libABCBinary.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		821E333324F5082300089F51 /* placeholder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = placeholder.h; sourceTree = "<group>"; };
+		821E333D24F5092D00089F51 /* ABC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ABC.m; path = ../../ABC/Classes/ABC.m; sourceTree = "<group>"; };
+		821E333E24F5092D00089F51 /* ABC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ABC.h; path = ../../ABC/Classes/ABC.h; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9A8F74B4D3AD199837415FF0 /* Pods-ABC_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ABC_Example.debug.xcconfig"; path = "Target Support Files/Pods-ABC_Example/Pods-ABC_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		A650C448FFA5737C3F61C0BE /* Pods_ABC_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABC_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E945383892D26DC1A04AB767 /* Pods-ABC_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ABC_Example.release.xcconfig"; path = "Target Support Files/Pods-ABC_Example/Pods-ABC_Example.release.xcconfig"; sourceTree = "<group>"; };
-		F147A98BF668E544BBD202CF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F147A98BF668E544BBD202CF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +112,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		821E332E24F5082300089F51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -101,6 +128,7 @@
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for ABC */,
 				6003F5B5195388D20070C39A /* Tests */,
+				821E333224F5082300089F51 /* ABCBinary */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				865094642AAD70032DF9091E /* Pods */,
@@ -112,6 +140,7 @@
 			children = (
 				6003F58A195388D20070C39A /* ABC_Example.app */,
 				6003F5AE195388D20070C39A /* ABC_Tests.xctest */,
+				821E333124F5082300089F51 /* libABCBinary.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -185,6 +214,16 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		821E333224F5082300089F51 /* ABCBinary */ = {
+			isa = PBXGroup;
+			children = (
+				821E333E24F5092D00089F51 /* ABC.h */,
+				821E333D24F5092D00089F51 /* ABC.m */,
+				821E333324F5082300089F51 /* placeholder.h */,
+			);
+			path = ABCBinary;
+			sourceTree = "<group>";
+		};
 		865094642AAD70032DF9091E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,11 +232,21 @@
 				5B95B49392E6A3143D51E255 /* Pods-ABC_Tests.debug.xcconfig */,
 				0E285C17AFC2D35A95C374DA /* Pods-ABC_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		821E334024F509A600089F51 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				821E334124F509B500089F51 /* ABC.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		6003F589195388D20070C39A /* ABC_Example */ = {
@@ -208,7 +257,6 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				BE46A35ADE99423AEDFF2B8A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -239,6 +287,24 @@
 			productReference = 6003F5AE195388D20070C39A /* ABC_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		821E333024F5082300089F51 /* ABCBinary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 821E333924F5082300089F51 /* Build configuration list for PBXNativeTarget "ABCBinary" */;
+			buildPhases = (
+				821E334024F509A600089F51 /* Headers */,
+				821E332D24F5082300089F51 /* Sources */,
+				821E332E24F5082300089F51 /* Frameworks */,
+				821E332F24F5082300089F51 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ABCBinary;
+			productName = ABCBinary;
+			productReference = 821E333124F5082300089F51 /* libABCBinary.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -252,6 +318,10 @@
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
+					821E333024F5082300089F51 = {
+						CreatedOnToolsVersion = 11.6;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "ABC" */;
@@ -259,6 +329,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -269,6 +340,7 @@
 			targets = (
 				6003F589195388D20070C39A /* ABC_Example */,
 				6003F5AD195388D20070C39A /* ABC_Tests */,
+				821E333024F5082300089F51 /* ABCBinary */,
 			);
 		};
 /* End PBXProject section */
@@ -358,24 +430,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ABC_Tests/Pods-ABC_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BE46A35ADE99423AEDFF2B8A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ABC_Example/Pods-ABC_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ABC/ABC.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ABC.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ABC_Example/Pods-ABC_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -394,6 +448,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		821E332D24F5082300089F51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				821E333F24F5092D00089F51 /* ABC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,6 +648,77 @@
 			};
 			name = Release;
 		};
+		821E333724F5082300089F51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		821E333824F5082300089F51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -612,6 +745,15 @@
 			buildConfigurations = (
 				6003F5C3195388D20070C39A /* Debug */,
 				6003F5C4195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		821E333924F5082300089F51 /* Build configuration list for PBXNativeTarget "ABCBinary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				821E333724F5082300089F51 /* Debug */,
+				821E333824F5082300089F51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
