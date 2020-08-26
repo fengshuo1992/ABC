@@ -22,6 +22,8 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
+		8218BAAB24F6C2FA00909B55 /* FSNameObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 8218BAA924F6C2FA00909B55 /* FSNameObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8218BAAC24F6C2FA00909B55 /* FSNameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8218BAAA24F6C2FA00909B55 /* FSNameObject.m */; };
 		821E333624F5082300089F51 /* placeholder.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 821E333324F5082300089F51 /* placeholder.h */; };
 		821E333F24F5092D00089F51 /* ABC.m in Sources */ = {isa = PBXBuildFile; fileRef = 821E333D24F5092D00089F51 /* ABC.m */; };
 		821E334124F509B500089F51 /* ABC.h in Headers */ = {isa = PBXBuildFile; fileRef = 821E333E24F5092D00089F51 /* ABC.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -78,6 +80,8 @@
 		6D2E6509B360F2D15A66D1F3 /* ABC.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ABC.podspec; path = ../ABC.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6F83D40C19ABD725548C21C2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8218BAA924F6C2FA00909B55 /* FSNameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSNameObject.h; path = ../../ABC/Classes/FSNameObject.h; sourceTree = "<group>"; };
+		8218BAAA24F6C2FA00909B55 /* FSNameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSNameObject.m; path = ../../ABC/Classes/FSNameObject.m; sourceTree = "<group>"; };
 		821E333124F5082300089F51 /* libABCBinary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libABCBinary.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		821E333324F5082300089F51 /* placeholder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = placeholder.h; sourceTree = "<group>"; };
 		821E333D24F5092D00089F51 /* ABC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ABC.m; path = ../../ABC/Classes/ABC.m; sourceTree = "<group>"; };
@@ -217,6 +221,8 @@
 		821E333224F5082300089F51 /* ABCBinary */ = {
 			isa = PBXGroup;
 			children = (
+				8218BAA924F6C2FA00909B55 /* FSNameObject.h */,
+				8218BAAA24F6C2FA00909B55 /* FSNameObject.m */,
 				821E333E24F5092D00089F51 /* ABC.h */,
 				821E333D24F5092D00089F51 /* ABC.m */,
 				821E333324F5082300089F51 /* placeholder.h */,
@@ -243,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				821E334124F509B500089F51 /* ABC.h in Headers */,
+				8218BAAB24F6C2FA00909B55 /* FSNameObject.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +481,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8218BAAC24F6C2FA00909B55 /* FSNameObject.m in Sources */,
 				821E333F24F5092D00089F51 /* ABC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
