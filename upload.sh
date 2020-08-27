@@ -87,7 +87,7 @@ function get_json_value() {
   local value=$(echo "${json}" | awk -F"[,:}]" '{for(i=1;i<=NF;i++){if($i~/'${key}'\042/){print $(i+1)}}}' | tr -d '"' | sed -n ${num}p)
   echo ${value}
 }
-
+echo "\n ----开始上传文件 ---- \n"
 #上传文件，并获取code值来确认是否上传成功
 res=$(get_json_value $(curl http://localhost:8020/frameworks -X POST -H "Content-Type:multipart/form-data" -F "name=${PROJECT_NAME}" -F "version=${NewVersionNumber}" -F "source=${Source}" -F "branch=master" -F "home_page=${Homepage}" -F "platform=iOS" -F "file=@${PROJECT_NAME}.zip") code)
 
