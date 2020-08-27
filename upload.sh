@@ -108,4 +108,4 @@ rm -rf ./$PROJECT_NAME.framework
 git commit -am ${NewVersionNumber}
 git tag ${NewVersionNumber}
 git push origin master --tags
-cd ~/.cocoapods/repos/XCSpecs && git pull origin master && cd - && pod repo push XCSpecs $PROJECT_NAME.podspec --verbose --allow-warnings --use-libraries
+cd ~/.cocoapods/repos/example_spec_bin_dev && git pull origin master && cd - && pod repo push example_spec_bin_dev $PROJECT_NAME.podspec --verbose --allow-warnings --use-libraries
