@@ -49,29 +49,29 @@ git push origin master --tags
 
 echo "\n ---- 开始打包二进制文件 ---- \n"
 pod package ./$PROJECT_NAME.podspec --exclude-deps --force --no-mangle --spec-sources=https://github.com/CocoaPods/Specs.git,https://github.com/fengshuo1992/example_spec_bin_dev.git
-eval $PACKAGE
+# eval $PACKAGE
 
-ret=$?
+# ret=$?
 
-if [ "$ret" -ne "0" ]; then
-  echo $?
-  exit 1
-fi
+# if [ "$ret" -ne "0" ]; then
+#   echo $?
+#   exit 1
+# fi
 
-echo "\n ---- 二进制文件打包成功 ---- \n"
+# echo "\n ---- 二进制文件打包成功 ---- \n"
 
-echo "\n ---- 完成二进制,移动到当前目录并开始压缩zip ---- \n"
-cp  ./$PROJECT_NAME-${NewVersionNumber}/ios/$PROJECT_NAME.framework ./
-zip --symlinks -r ./$PROJECT_NAME.zip ./$PROJECT_NAME.framework
+# echo "\n ---- 完成二进制,移动到当前目录并开始压缩zip ---- \n"
+# cp  ./$PROJECT_NAME-${NewVersionNumber}/ios/$PROJECT_NAME.framework ./
+# zip --symlinks -r ./$PROJECT_NAME.zip ./$PROJECT_NAME.framework
 
-rm -rf ./$PROJECT_NAME-${NewVersionNumber} #删除打包文件
+# # rm -rf ./$PROJECT_NAME-${NewVersionNumber} #删除打包文件
 
-if [ "$?" -eq "0" ]; then
-  echo "\n --- 二进制压缩ZIP文件成功 ----\n"
-else
-  echo "\n --- 二进制文件压缩ZIP失败  ---\n"
-  exit 1
-fi
+# if [ "$?" -eq "0" ]; then
+#   echo "\n --- 二进制压缩ZIP文件成功 ----\n"
+# else
+#   echo "\n --- 二进制文件压缩ZIP失败  ---\n"
+#   exit 1
+# fi
 
 # echo "\n ---- 上传文件 ---- \n"
 # function get_json_value() {
