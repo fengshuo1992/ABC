@@ -73,12 +73,39 @@ else
   exit 1
 fi
 
+# echo "\n ---- 上传文件 ---- \n"
+# function get_json_value() {
+#   local json=$1
+#   local key=$2
 
-#获取上传状态
-#rm -rf ./$PROJECT_NAME.zip
-#rm -rf ./$PROJECT_NAME.framework
+#   if [[ -z "$3" ]]; then
+#     local num=1
+#   else
+#     local num=$3
+#   fi
 
-git commit -am ${NewVersionNumber}
-git tag ${NewVersionNumber}
-git push origin master --tags
-cd ~/.cocoapods/repos/example_spec_bin_dev && git pull origin master && cd - && pod repo push example_spec_bin_dev $PROJECT_NAME.podspec --verbose --allow-warnings --use-libraries
+#   local value=$(echo "${json}" | awk -F"[,:}]" '{for(i=1;i<=NF;i++){if($i~/'${key}'\042/){print $(i+1)}}}' | tr -d '"' | sed -n ${num}p)
+#   echo ${value}
+# }
+# echo "\n ----开始上传文件 ---- \n"
+# #上传文件，并获取code值来确认是否上传成功
+# res=$(get_json_value $(curl http://localhost:8020/frameworks -X POST -H "Content-Type:multipart/form-data" -F "name=${PROJECT_NAME}" -F "version=${NewVersionNumber}" -F "source=${Source}" -F "branch=master" -F "home_page=${Homepage}" -F "platform=iOS" -F "file=@${PROJECT_NAME}.zip") code)
+
+
+# echo "==========${res}============"
+
+# if [[ "${res}" -eq "200" ]]; then
+#   echo "二进制文件上传成功"
+# else
+#   echo "二进制文件上传失败"
+#   exit 1
+# fi
+
+# #获取上传状态
+# rm -rf ./$PROJECT_NAME.zip
+# rm -rf ./$PROJECT_NAME.framework
+
+# git commit -am ${NewVersionNumber}
+# git tag ${NewVersionNumber}
+# git push origin master --tags
+# cd ~/.cocoapods/repos/example_spec_bin_dev && git pull origin master && cd - && pod repo push example_spec_bin_dev $PROJECT_NAME.podspec --verbose --allow-warnings --use-libraries
