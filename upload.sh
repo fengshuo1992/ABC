@@ -65,6 +65,7 @@ cp -rf ./$PROJECT_NAME-${NewVersionNumber}/ios/$PROJECT_NAME.framework ./
 zip --symlinks -r ./$PROJECT_NAME.zip ./$PROJECT_NAME.framework
 
 #rm -rf ./$PROJECT_NAME-${NewVersionNumber} #删除打包文件
+return
 
 if [ "$?" -eq "0" ]; then
   echo "\n --- 二进制压缩ZIP文件成功 ----\n"
