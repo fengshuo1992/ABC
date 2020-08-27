@@ -75,8 +75,8 @@ fi
 
 
 #获取上传状态
-rm -rf ./$PROJECT_NAME.zip
-rm -rf ./$PROJECT_NAME.framework
+#rm -rf ./$PROJECT_NAME.zip
+#rm -rf ./$PROJECT_NAME.framework
 
 git commit -am ${NewVersionNumber}
 git tag ${NewVersionNumber}
