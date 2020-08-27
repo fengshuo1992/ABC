@@ -48,7 +48,7 @@ git tag ${NewVersionNumber}
 git push origin master --tags
 
 echo "\n ---- 开始打包二进制文件 ---- \n"
-pod package ./$PROJECT_NAME.podspec --exclude-deps --force --no-mangle --spec-sources=https://github.com/CocoaPods/Specs.git,https://github.com/fengshuo1992/example_spec_bin_dev.git
+pod package ABC.podspec --exclude-deps --force --no-mangle --spec-sources=https://github.com/CocoaPods/Specs.git,https://github.com/fengshuo1992/example_spec_bin_dev.git
 # eval $PACKAGE
 
 # ret=$?
