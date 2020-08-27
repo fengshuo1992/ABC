@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  if s.version.to_s.include?'Binary'
+  if s.version.to_s.include?'Binary'or ENV['IS_BINARY']  
     
     puts '-------------------------------------------------------------------'
     puts 'Notice:ABC is binary now'
