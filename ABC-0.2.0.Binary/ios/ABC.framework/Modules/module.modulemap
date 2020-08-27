@@ -1,6 +1,0 @@
-framework module ABC {
-  umbrella header "ABC.h"
-
-  export *
-  module * { export * }
-}
