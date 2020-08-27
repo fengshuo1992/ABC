@@ -50,7 +50,7 @@ git push origin master --tags
 echo "\n ---- 开始打包二进制文件 ---- \n"
 pod package ./$PROJECT_NAME.podspec --exclude-deps --force --no-mangle --spec-sources=https://github.com/CocoaPods/Specs.git,https://github.com/fengshuo1992/example_spec_bin_dev.git
 eval $PACKAGE
-return
+
 ret=$?
 
 if [ "$ret" -ne "0" ]; then
@@ -73,33 +73,6 @@ else
   exit 1
 fi
 
-echo "\n ---- 上传文件 ---- \n"
-function get_json_value() {
-  local json=$1
-  local key=$2
-
-  if [[ -z "$3" ]]; then
-    local num=1
-  else
-    local num=$3
-  fi
-
-  local value=$(echo "${json}" | awk -F"[,:}]" '{for(i=1;i<=NF;i++){if($i~/'${key}'\042/){print $(i+1)}}}' | tr -d '"' | sed -n ${num}p)
-  echo ${value}
-}
-echo "\n ----开始上传文件 ---- \n"
-#上传文件，并获取code值来确认是否上传成功
-res=$(get_json_value $(curl http://localhost:8020/frameworks -X POST -H "Content-Type:multipart/form-data" -F "name=${PROJECT_NAME}" -F "version=${NewVersionNumber}" -F "source=${Source}" -F "branch=master" -F "home_page=${Homepage}" -F "platform=iOS" -F "file=@${PROJECT_NAME}.zip") code)
-
-
-echo "==========${res}============"
-
-if [[ "${res}" -eq "200" ]]; then
-  echo "二进制文件上传成功"
-else
-  echo "二进制文件上传失败"
-  exit 1
-fi
 
 #获取上传状态
 rm -rf ./$PROJECT_NAME.zip
