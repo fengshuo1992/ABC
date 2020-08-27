@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ABC'
-  s.version          = '39'
+  s.version          = '40'
   s.summary          = 'A short description of ABC.'
 
 # This description is used to generate tags and improve search results.
