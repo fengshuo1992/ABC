@@ -89,7 +89,7 @@ function get_json_value() {
 }
 
 #上传文件，并获取code值来确认是否上传成功
-res=$(get_json_value $(curl http://localhost:9090/frameworks -X POST -H "Content-Type:multipart/form-data" -F "name=${PROJECT_NAME}" -F "version=${NewVersionNumber}" -F "source=${Source}" -F "branch=master" -F "home_page=${Homepage}" -F "platform=iOS" -F "file=@${PROJECT_NAME}.zip") code)
+res=$(get_json_value $(curl http://localhost:8020/frameworks -X POST -H "Content-Type:multipart/form-data" -F "name=${PROJECT_NAME}" -F "version=${NewVersionNumber}" -F "source=${Source}" -F "branch=master" -F "home_page=${Homepage}" -F "platform=iOS" -F "file=@${PROJECT_NAME}.zip") code)
 
 
 echo "==========${res}============"
