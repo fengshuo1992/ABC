@@ -34,4 +34,13 @@ Carthage/Build
 # Note: if you ignore the Pods directory, make sure to uncomment
 # `pod install` in .travis.yml
 #
-Pods/
+Pod
+Example/ABC.xcworkspace
+Example/Podfile.lock
+Example/Pods
+Example/Tests
+build_lib.sh
+
+_Pods.xcodeproj
+upload.sh
+

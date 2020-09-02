@@ -63,8 +63,7 @@ echo "current version is ${VersionNumber}, new version is ${NewVersionNumber}"
  echo "\n ---- 完成二进制,移动到当前目录并开始压缩zip ---- \n"
  cp  ./$PROJECT_NAME-${NewVersionNumber}/ios/$PROJECT_NAME.framework ./
  zip --symlinks -r ./$PROJECT_NAME.zip ./$PROJECT_NAME.framework
-
-# rm -rf ./$PROJECT_NAME-${NewVersionNumber} #删除打包文件
+ rm -rf ./$PROJECT_NAME-${NewVersionNumber} #删除打包文件
 
  if [ "$?" -eq "0" ]; then
    echo "\n --- 二进制压缩ZIP文件成功 ----\n"
