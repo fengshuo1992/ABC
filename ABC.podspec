@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ABC'
-  s.version          = '42'
+  s.version          = '52'
   s.summary          = 'A short description of ABC.'
 
 # This description is used to generate tags and improve search results.
@@ -29,19 +29,13 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
-
-  if s.version.to_s.include?'Binary'or ENV['IS_BINARY']  
     
     puts '-------------------------------------------------------------------'
     puts 'Notice:ABC is binary now'
     puts '-------------------------------------------------------------------'
-    s.prepare_command = '/bin/bash build_lib.sh'
     s.source_files = 'Pod/Products/include/**'
     s.ios.vendored_libraries = 'Pod/Products/lib/*.a'
-    s.public_header_files = 'Pod/Products/include/*.h'    
-else
-    s.source_files = 'ABC/Classes/**/*'
-end
+    s.public_header_files = 'Pod/Products/include/*.h'
 
 
   # s.resource_bundles = {

@@ -323,6 +323,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = fengshuo1992;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = S96K5NZ7N7;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -602,6 +605,7 @@
 			baseConfigurationReference = 9A8F74B4D3AD199837415FF0 /* Pods-ABC_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = S96K5NZ7N7;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ABC/ABC-Prefix.pch";
 				INFOPLIST_FILE = "ABC/ABC-Info.plist";
@@ -618,6 +622,7 @@
 			baseConfigurationReference = E945383892D26DC1A04AB767 /* Pods-ABC_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = S96K5NZ7N7;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ABC/ABC-Prefix.pch";
 				INFOPLIST_FILE = "ABC/ABC-Info.plist";

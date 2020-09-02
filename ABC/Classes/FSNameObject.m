@@ -12,4 +12,9 @@
 - (void)fsNameObjcet {
     NSLog(@"aaaaaa");
 }
+
+- (void)testUpdate {
+    NSLog(@"这个是测试更新的");
+}
+
 @end

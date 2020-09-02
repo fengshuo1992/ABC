@@ -6,7 +6,7 @@
 # VersionNumber=`tr -cd 0-9 <<<"$VersionString"`
 # NewVersionNumber=$(($VersionNumber + 1))
 # LineNumber=`grep -nE 's.version.*=' $PROJECT_NAME.podspec | cut -d : -f1`
-# sed -i "" "${LineNumber}s/${VersionNumber}/${NewVersionNumber}/g" $PROJECT_NAME.podspec
+# gsed -i "" "${LineNumber}s/${VersionNumber}/${NewVersionNumber}/g" $PROJECT_NAME.podspec
 
 # echo "current version is ${VersionNumber}, new version is ${NewVersionNumber}"
 
@@ -39,8 +39,8 @@ echo "current version is ${VersionNumber}, new version is ${NewVersionNumber}"
 
  echo "删除旧的二进制文件"
  rm -rf ./$PROJECT_NAME-${VersionNumber}
- rm -rf ./$PROJECT_NAME/SDK/$PROJECT_NAME.zip
- rm -rf ./$PROJECT_NAME/SDK/$PROJECT_NAME.framework
+# rm -rf ./$PROJECT_NAME/SDK/$PROJECT_NAME.zip
+# rm -rf ./$PROJECT_NAME/SDK/$PROJECT_NAME.framework
 
  git add .
  git commit -am "新增Tag对应二进制文件"
@@ -61,10 +61,10 @@ echo "current version is ${VersionNumber}, new version is ${NewVersionNumber}"
  echo "\n ---- 二进制文件打包成功 ---- \n"
 
  echo "\n ---- 完成二进制,移动到当前目录并开始压缩zip ---- \n"
- cp  ./$PROJECT_NAME-${NewVersionNumber}/ios/$PROJECT_NAME.framework ./
+ cp -rf ./$PROJECT_NAME-${NewVersionNumber}/ios/$PROJECT_NAME.framework ./
  zip --symlinks -r ./$PROJECT_NAME.zip ./$PROJECT_NAME.framework
 
-# rm -rf ./$PROJECT_NAME-${NewVersionNumber} #删除打包文件
+ rm -rf ./$PROJECT_NAME-${NewVersionNumber} #删除打包文件
 
  if [ "$?" -eq "0" ]; then
    echo "\n --- 二进制压缩ZIP文件成功 ----\n"
@@ -89,17 +89,17 @@ function get_json_value() {
 }
 echo "\n ----开始上传文件 ---- \n"
 #上传文件，并获取code值来确认是否上传成功
-res=$(get_json_value $(curl http://localhost:8020/frameworks -X POST -H "Content-Type:multipart/form-data" -F "name=${PROJECT_NAME}" -F "version=${NewVersionNumber}" -F "source=${Source}" -F "branch=master" -F "home_page=${Homepage}" -F "platform=iOS" -F "file=@${PROJECT_NAME}.zip") code)
+curl http://localhost:8080/frameworks -X POST -H "Content-Type:multipart/form-data" -F "name=${PROJECT_NAME}" -F "version=${NewVersionNumber}" -F "source=${Source}" -F "branch=master" -F "home_page=${Homepage}" -F "platform=iOS" -F "file=@${PROJECT_NAME}.zip"
 
 
-echo "==========${res}============"
+#echo "==========${res}============"
 
-if [[ "${res}" -eq "200" ]]; then
-  echo "二进制文件上传成功"
-else
-  echo "二进制文件上传失败"
-  exit 1
-fi
+#if [[ "${res}" -eq "200" ]]; then
+#  echo "二进制文件上传成功"
+#else
+#  echo "二进制文件上传失败"
+#  exit 1
+#fi
 
 #获取上传状态
 rm -rf ./$PROJECT_NAME.zip

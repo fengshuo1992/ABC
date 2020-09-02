@@ -1,0 +1,32 @@
+---
+installation_method:
+  name: cocoapods
+  options:
+    :deterministic_uuids: false
+    :generate_multiple_pod_projects: false
+    :incremental_installation: false
+    :share_schemes_for_development_pods: true
+    :warn_for_multiple_pod_sources: false
+workspace: ABC.xcworkspace
+sources:
+  - "git@github.com:fengshuo1992/example_spec_bin_dev.git"
+  - "git@github.com:fengshuo1992/example_spec_source.git"
+plugins:
+  cocoapods-disable-podfile-validations:
+    no_abstract_only_pods: true
+  cocoapods-generate:
+    {}
+target_definitions:
+  - abstract: true
+    children:
+      - abstract: true
+        name: Transitive Dependencies
+      - name: App-iOS
+    dependencies:
+      - ABC:
+        - :path: "../../ABC.podspec"
+    name: Pods
+    user_project_path: ABC.xcodeproj
+    uses_frameworks:
+      :linkage: :static
+      :packaging: :library
