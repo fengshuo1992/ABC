@@ -40,7 +40,5 @@ Example/Podfile.lock
 Example/Pods
 Example/Tests
 build_lib.sh
-
-_Pods.xcodeproj
 upload.sh
 
